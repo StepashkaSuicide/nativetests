@@ -11,6 +11,7 @@ export type StreetType = {
 export type AddressType = {
     number?: number
     street: StreetType
+
 }
 
 export type HouseType ={
@@ -27,6 +28,7 @@ export type GovernmentBuildingsType = {
     budget: number
     staffCount: number
     address: AddressType
+
 }
 
 
@@ -35,4 +37,5 @@ export type CityType = {
     houses: Array<HouseType>
     governmentBuildings: Array<GovernmentBuildingsType>
     citizensNumber: number
+
 }
