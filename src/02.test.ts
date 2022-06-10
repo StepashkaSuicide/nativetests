@@ -1,6 +1,6 @@
 import {CityType} from "./02_02";
 import {createMessages, getStreetsTitlesOfGovernmentBuildings, getStreetsTitlesOfHouses} from "./05map";
-import exp from "constants";
+
 
 let city: CityType;
 
@@ -103,10 +103,8 @@ test("test city should contains hospital and fire station", () => {
 })
 
 
-
-
 // 01. создайте в том же файле ещё одну функцию, чтобы тесты прошли
-test('list of streets titles of government buildings', ()=> {
+test('list of streets titles of government buildings', () => {
     let streetsNames = getStreetsTitlesOfGovernmentBuildings(city.governmentBuildings);
 
     expect(streetsNames.length).toBe(2);
@@ -115,7 +113,7 @@ test('list of streets titles of government buildings', ()=> {
 })
 
 //02. создайте в том же файле ещё одну функцию, чтобы тесты прошли
-test('list of streets titles', ()=> {
+test('list of streets titles', () => {
     let streetsNames = getStreetsTitlesOfHouses(city.houses);
 
     expect(streetsNames.length).toBe(3);
@@ -125,7 +123,7 @@ test('list of streets titles', ()=> {
 })
 
 
-test('create greeting messages for streets', ()=> {
+test('create greeting messages for streets', () => {
     let messages = createMessages(city.houses)
     expect(messages.length).toBe(3)
     expect(messages[0]).toBe('Hello guys from White street')
